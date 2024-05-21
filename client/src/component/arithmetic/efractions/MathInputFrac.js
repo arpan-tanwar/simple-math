@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 const MathInputFrac = ({setInputs4, inputs4,type,  mathInputNull, setMathInputNull}) => {
+=======
+const MathInputFrac = ({setInputs4, inputs4,type,   mathInputNull, setMathInputNull}) => {
+>>>>>>> working
   const [expression, setExpression] = useState('');
   const [inputWidth, setInputWidth] = useState('w-10 sm:w-20');
   
@@ -62,6 +66,11 @@ const MathInputFrac = ({setInputs4, inputs4,type,  mathInputNull, setMathInputNu
         setInputs4({...inputs4, inputDenom:  null  })
       }
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> working
   
 
   };
