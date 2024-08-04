@@ -8,6 +8,7 @@ import MathInput from "./MathInput";
 import play from "./../../../images/play.png";
 import Fraction from "../efractions/Fraction";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
+import MathQuestion from "./MathQuestion";
 
 const Arithmetic = () => {
   const btnNextRef = useRef(null);
@@ -663,24 +664,9 @@ const Arithmetic = () => {
                             </tr>
                           </table>
                         )}
-                        <MathJaxContext>
-                          <div>
-                            <h2>Derivative Example</h2>
-                            <MathJax>
-                              {"\\(\\frac{dy}{dx} = 3x^2 + 2x - 5\\)"}
-                            </MathJax>
-                            <h2>Integral Example</h2>
-                            <MathJax>
-                              {"\\(\\int_{0}^{1} (3x^2 + 2x - 5) \\, dx\\)"}
-                            </MathJax>
-                            <h2>Taylor Series</h2>
-                            <MathJax>
-                              {
-                                "\\(f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!} (x-a)^n\\)"
-                              }
-                            </MathJax>
-                          </div>
-                        </MathJaxContext>
+                        <MathQuestion
+                          initialQuestion={`(${randomNums.numerator1}/${randomNums.denominator1})/(${randomNums.numerator2}/${randomNums.denominator2})=${randomNums.numerator1}/${randomNums.denominator1}`}
+                        ></MathQuestion>
                         {difficulty > 1 && (
                           <table className="digit">
                             <tr className="">
